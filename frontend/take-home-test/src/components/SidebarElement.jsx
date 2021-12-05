@@ -1,18 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import { H3 } from "../GlobalStyles";
-const SidebarElement = ({ text, iconSVGLeft, isSelected }) => {
+import { Routes, Route, Outlet, Link, NavLink } from "react-router-dom";
+
+const SidebarElement = ({ text, iconSVGLeft, isSelected, path }) => {
   return (
     <Container>
       {iconSVGLeft && <IconSVGLeft as={iconSVGLeft} />}
-      {text && <LabelSidebar>{text}</LabelSidebar>}
+      {text && <StyledNavLink to={path}>{text}</StyledNavLink>}
     </Container>
+    //     <nav
+    //     style={{
+    //       borderBottom: "solid 1px",
+    //       paddingBottom: "1rem",
+    //     }}
+    //   >
+    //     <Link to="/invoices">Invoices</Link> |{" "}
+    //     <Link to="/expenses">Expenses</Link>
+    //   </nav>
   );
+};
+
+SidebarElement.defaultProps = {
+  path: "/",
 };
 
 const LabelSidebar = styled.div`
   font-size: 1.563rem;
-  /* margin: 10%; */
+`;
+
+const StyledNavLink = styled(NavLink)`
+  font-size: 1.563rem;
 `;
 
 const IconSVGLeft = styled.div`
@@ -28,7 +45,7 @@ const IconSVGLeft = styled.div`
 
   padding: 5px 5px 5px 0px;
 
-  & ~ ${LabelSidebar} {
+  & ~ ${StyledNavLink} {
     margin-left: 5px;
   }
 `;

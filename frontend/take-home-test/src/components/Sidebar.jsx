@@ -4,6 +4,7 @@ import SidebarElement from "./SidebarElement";
 import { ReactComponent as BranchSVG } from "../assets/branch.svg";
 import { ReactComponent as HomeSVG } from "../assets/home.svg";
 import SidebarLogo from "./SidebarLogo";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [state, setState] = useState({
@@ -17,8 +18,16 @@ const Sidebar = () => {
         sidebar={
           <div>
             <SidebarLogo />
-            <SidebarElement text="Commits" iconSVGLeft={HomeSVG} />
-            <SidebarElement text="Branches" iconSVGLeft={BranchSVG} />
+            <SidebarElement
+              text="Commits"
+              path="/commits"
+              iconSVGLeft={HomeSVG}
+            ></SidebarElement>
+            <SidebarElement
+              text="Branches"
+              path="/branches"
+              iconSVGLeft={BranchSVG}
+            />
           </div>
         }
         open={state.open}
