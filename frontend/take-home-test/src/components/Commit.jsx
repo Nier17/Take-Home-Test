@@ -37,9 +37,7 @@ const StyledAccordionBody = styled(Accordion.Body)`
 const StyledSubAccordionBody = styled(Accordion.Body)`
   background-color: white;
 `;
-const ContainerBody = styled.div`
-  width: 200px;
-`;
+
 const AccordionDiv = styled.div``;
 
 export default Commit;

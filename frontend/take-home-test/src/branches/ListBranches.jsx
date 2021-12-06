@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Branch from "../components/Branch";
 
 const URL = "http://localhost:3001/getBranches";
-// const URL =
-// "https://api.github.com/repos/Nier17/Take-Home-Test/branches/feature/requirementsCommits";
 
 const ListBranches = () => {
   function getData() {

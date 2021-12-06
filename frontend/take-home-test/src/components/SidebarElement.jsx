@@ -1,14 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import {
-  Routes,
-  Route,
-  Outlet,
-  Link,
-  NavLink,
-  useLocation,
-} from "react-router-dom";
-import { GlobalStyles } from "../GlobalStyles";
+import { NavLink, useLocation } from "react-router-dom";
 
 const SidebarElement = ({ text, iconSVGLeft, isSelected, path }) => {
   return (

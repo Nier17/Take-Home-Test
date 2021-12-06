@@ -4,7 +4,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const Branch = ({ title, branchURL, eventKey }) => {
   return (
-    <div>
+    <Container>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey={eventKey}>
           <Accordion.Header>{title}</Accordion.Header>
@@ -14,7 +14,7 @@ const Branch = ({ title, branchURL, eventKey }) => {
           </StyledSubAccordionBody>
         </Accordion.Item>
       </Accordion>
-    </div>
+    </Container>
   );
 };
 
@@ -25,9 +25,6 @@ const StyledAccordionBody = styled(Accordion.Body)`
 const StyledSubAccordionBody = styled(Accordion.Body)`
   background-color: white;
 `;
-const ContainerBody = styled.div`
-  width: 200px;
-`;
-const AccordionDiv = styled.div``;
+const Container = styled.div``;
 
 export default Branch;

@@ -4,7 +4,7 @@ import SidebarElement from "./SidebarElement";
 import { ReactComponent as BranchSVG } from "../assets/branch.svg";
 import { ReactComponent as HomeSVG } from "../assets/home.svg";
 import SidebarLogo from "./SidebarLogo";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Sidebar = ({ open }) => {
   const [state, setState] = useState({
@@ -12,7 +12,7 @@ const Sidebar = ({ open }) => {
   });
 
   return (
-    <div>
+    <Container>
       {" "}
       <SidebarComponent
         sidebar={
@@ -51,12 +51,14 @@ const Sidebar = ({ open }) => {
       >
         <p></p>
       </SidebarComponent>
-    </div>
+    </Container>
   );
 };
 
 Sidebar.defaultProps = {
   open: false,
 };
+
+const Container = styled.div``;
 
 export default Sidebar;
