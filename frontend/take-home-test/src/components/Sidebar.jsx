@@ -35,7 +35,16 @@ const Sidebar = ({ open }) => {
           sidebar: {
             backgroundColor: "#FFFFFF",
             position: "fixed",
-            // zIndex: 0,
+          },
+          root: {
+            position: "undefined",
+          },
+          content: {
+            position: "undefined",
+            top: "undefined",
+            left: "undefined",
+            right: "undefined",
+            bottom: "undefined",
           },
         }}
       >
