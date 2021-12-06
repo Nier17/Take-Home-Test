@@ -33,6 +33,7 @@ const Sidebar = ({ open }) => {
         docked={true}
         styles={{
           sidebar: {
+            width: 260,
             backgroundColor: "#FFFFFF",
             position: "fixed",
           },

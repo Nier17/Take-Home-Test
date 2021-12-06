@@ -16,13 +16,13 @@ const Commit = ({
         <Accordion.Header>{title}</Accordion.Header>
         <AccordionDiv>
           <StyledAccordionBody>Id</StyledAccordionBody>
-          <StyledAccordionBody>{commitId}</StyledAccordionBody>
+          <StyledSubAccordionBody>{commitId}</StyledSubAccordionBody>
           <StyledAccordionBody>Author</StyledAccordionBody>
-          <StyledAccordionBody>{author}</StyledAccordionBody>
-          <StyledAccordionBody>Author Email</StyledAccordionBody>
-          <StyledAccordionBody>{authorEmail}</StyledAccordionBody>
+          <StyledSubAccordionBody>{author}</StyledSubAccordionBody>
+          <StyledAccordionBody>Author email</StyledAccordionBody>
+          <StyledSubAccordionBody>{authorEmail}</StyledSubAccordionBody>
           <StyledAccordionBody>Date</StyledAccordionBody>
-          <StyledAccordionBody>{commitDate}</StyledAccordionBody>
+          <StyledSubAccordionBody>{commitDate}</StyledSubAccordionBody>
         </AccordionDiv>
       </Accordion.Item>
     </Accordion>
@@ -30,6 +30,11 @@ const Commit = ({
 };
 
 const StyledAccordionBody = styled(Accordion.Body)`
+  background-color: white;
+  font-weight: bold;
+  height: 5px;
+`;
+const StyledSubAccordionBody = styled(Accordion.Body)`
   background-color: white;
 `;
 const ContainerBody = styled.div`

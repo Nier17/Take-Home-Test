@@ -27,7 +27,7 @@ function App() {
 }
 
 const Container = styled.div`
-  width: 100%;
+  width: 80%;
   margin-left: 280px;
   ${(props) => {
     if (props.open === true)

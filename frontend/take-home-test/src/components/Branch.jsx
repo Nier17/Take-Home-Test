@@ -9,9 +9,9 @@ const Branch = ({ title, branchURL, eventKey }) => {
         <Accordion.Item eventKey={eventKey}>
           <Accordion.Header>{title}</Accordion.Header>
           <StyledAccordionBody>URL</StyledAccordionBody>
-          <StyledAccordionBody>
+          <StyledSubAccordionBody>
             <a href={branchURL}> {branchURL}</a>
-          </StyledAccordionBody>
+          </StyledSubAccordionBody>
         </Accordion.Item>
       </Accordion>
     </div>
@@ -20,7 +20,10 @@ const Branch = ({ title, branchURL, eventKey }) => {
 
 const StyledAccordionBody = styled(Accordion.Body)`
   background-color: white;
-  user-select: text !important;
+  font-weight: bold;
+`;
+const StyledSubAccordionBody = styled(Accordion.Body)`
+  background-color: white;
 `;
 const ContainerBody = styled.div`
   width: 200px;

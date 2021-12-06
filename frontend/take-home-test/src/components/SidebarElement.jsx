@@ -1,22 +1,25 @@
 import React from "react";
-import styled from "styled-components";
-import { Routes, Route, Outlet, Link, NavLink } from "react-router-dom";
+import styled, { css } from "styled-components";
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
+import { GlobalStyles } from "../GlobalStyles";
 
 const SidebarElement = ({ text, iconSVGLeft, isSelected, path }) => {
   return (
-    <Container>
+    <Container path={path}>
       {iconSVGLeft && <IconSVGLeft as={iconSVGLeft} />}
-      {text && <StyledNavLink to={path}>{text}</StyledNavLink>}
+      {text && (
+        <StyledNavLink to={path} path={path}>
+          {text}
+        </StyledNavLink>
+      )}
     </Container>
-    //     <nav
-    //     style={{
-    //       borderBottom: "solid 1px",
-    //       paddingBottom: "1rem",
-    //     }}
-    //   >
-    //     <Link to="/invoices">Invoices</Link> |{" "}
-    //     <Link to="/expenses">Expenses</Link>
-    //   </nav>
   );
 };
 
@@ -24,12 +27,14 @@ SidebarElement.defaultProps = {
   path: "/",
 };
 
-const LabelSidebar = styled.div`
-  font-size: 1.563rem;
-`;
-
 const StyledNavLink = styled(NavLink)`
   font-size: 1.563rem;
+  ${(props) => {
+    if (props.path === useLocation().pathname)
+      return css`
+        color: #747eab;
+      `;
+  }}
 `;
 
 const IconSVGLeft = styled.div`
@@ -52,10 +57,19 @@ const IconSVGLeft = styled.div`
 
 const Container = styled.div`
   display: flex;
-  width: 260px;
   cursor: pointer;
+  padding: 5px 5px 5px 10px;
   margin: 10% 10% 10% 20%;
-  /* justify-content: center; */
+  ${(props) => {
+    if (props.path === useLocation().pathname)
+      return css`
+        border: 4px solid #747eab;
+        border-radius: 8px;
+        ${IconSVGLeft} {
+          fill: #747eab;
+        }
+      `;
+  }}
 `;
 
 export default SidebarElement;
