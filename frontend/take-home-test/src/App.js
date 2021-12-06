@@ -4,6 +4,7 @@ import BoardCommits from "./commit/BoardCommits";
 import BoardBranches from "./branches/BoardBranches";
 import { Routes, Route, Outlet, Link, BrowserRouter } from "react-router-dom";
 import styled, { css } from "styled-components";
+import BoardHome from "./home/BoardHome";
 
 function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/commits" element={<BoardCommits />} />
             <Route path="/branches" element={<BoardBranches />} />
+            <Route path="/" element={<BoardHome />} />
           </Routes>
         </Container>
       </BrowserRouter>
