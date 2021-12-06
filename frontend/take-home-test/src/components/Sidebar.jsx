@@ -6,7 +6,7 @@ import { ReactComponent as HomeSVG } from "../assets/home.svg";
 import SidebarLogo from "./SidebarLogo";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
-const Sidebar = ({ open, getOpen }) => {
+const Sidebar = ({ open }) => {
   const [state, setState] = useState({
     open: open,
   });
@@ -32,18 +32,14 @@ const Sidebar = ({ open, getOpen }) => {
         }
         docked={true}
         styles={{
-          sidebar: { backgroundColor: "#FFFFFF", position: "fixed" },
+          sidebar: {
+            backgroundColor: "#FFFFFF",
+            position: "fixed",
+            // zIndex: 0,
+          },
         }}
       >
         <p></p>
-        {/* <button
-          onClick={() => {
-            setState({ open: !state.open });
-            getOpen(state.open);
-          }}
-        >
-          Open sidebar
-        </button> */}
       </SidebarComponent>
     </div>
   );

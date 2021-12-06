@@ -19,9 +19,9 @@ const ListCommit = () => {
   return (
     <Container>
       {commits.map((element, index) => {
-        console.log(element);
         return (
           <Commit
+            eventKey={index}
             key={index}
             title={element?.commit?.message}
             commitId={element?.sha}

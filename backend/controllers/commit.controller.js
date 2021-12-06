@@ -11,7 +11,6 @@ commitController.getCommits = async (req, res) => {
   axios.get(URL).then(function (response) {
     res.send(response.data);
   });
-  // .cath((e) => console.log(e));
 };
 
 module.exports = commitController;
