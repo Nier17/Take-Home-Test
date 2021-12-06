@@ -14,9 +14,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Sidebar
-        // getOpen={(x) => setOpenSidebar(x)}
-        ></Sidebar>
+        <Sidebar></Sidebar>
         <Container open={openSidebar}>
           <Routes>
             <Route path="/commits" element={<BoardCommits />} />

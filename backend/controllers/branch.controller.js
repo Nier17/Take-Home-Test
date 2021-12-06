@@ -10,4 +10,12 @@ branchController.getBranches = async (req, res) => {
   });
 };
 
+branchController.getBranchById = async (req, res) => {
+  const newURL = URL + `/${req.params.id}`;
+  console.log(newURL);
+  axios.get(newURL).then(function (response) {
+    res.send(response.data);
+  });
+};
+
 module.exports = branchController;
