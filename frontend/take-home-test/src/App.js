@@ -10,7 +10,7 @@ function App() {
         <Sidebar></Sidebar>
         <Routes>
           <Route path="/commits" element={<BoardCommits />} />
-          <Route path="branches" element={<BoardBranches />} />
+          <Route path="/branches" element={<BoardBranches />} />
         </Routes>
       </BrowserRouter>
     </div>

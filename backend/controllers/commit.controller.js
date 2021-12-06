@@ -1,9 +1,9 @@
 const axios = require("axios");
 const { json } = require("express");
-const URL =
-  "https://api.github.com/repos/Nier17/Take-Home-Test/branches/feature/requirementsCommits";
+// const URL =
+  // "https://api.github.com/repos/Nier17/Take-Home-Test/branches/feature/requirementsCommits";
 
-// const URL = "https://api.github.com/repos/Nier17/Take-Home-Test/commits";
+const URL = "https://api.github.com/repos/Nier17/Take-Home-Test/commits";
 
 const commitController = {};
 
