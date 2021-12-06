@@ -1,7 +1,9 @@
 # Requirements
 
 NodeJS v12.17.0 or superior
+
 Visual Studio Code
+
 Git Bash (Git)
 
 # Installation
@@ -17,6 +19,8 @@ Git Bash (Git)
 5. Open a new terminal, and go to the "frontend" directory, and inside it, go to the "take-home-test" folder.
 
 6. Run "npm install" and after finish it, run "npm run start". Now the frontend should be running too!
+
+7. Go to `http://localhost:3000/` and test it!
 
 You can see the GitHub repository here: https://github.com/Nier17/Take-Home-Test
 
