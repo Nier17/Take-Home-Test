@@ -33,17 +33,17 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const IconSVGLeft = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 32px;
+  min-height: 32px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 5px 5px 5px 0px;
+  padding: 5px 5px 0px 0px;
 
   & ~ ${StyledNavLink} {
     margin-left: 5px;
@@ -52,9 +52,8 @@ const IconSVGLeft = styled.div`
 
 const Container = styled.div`
   display: flex;
-  width: 280px;
+  width: 260px;
   cursor: pointer;
-  margin-left: 20%;
   margin: 10% 10% 10% 20%;
   /* justify-content: center; */
 `;

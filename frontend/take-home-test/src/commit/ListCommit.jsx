@@ -20,7 +20,16 @@ const ListCommit = () => {
     <Container>
       {commits.map((element, index) => {
         console.log(element);
-        return <Commit key={index} />;
+        return (
+          <Commit
+            key={index}
+            title={element?.commit?.message}
+            commitId={element?.sha}
+            author={element?.commit?.author?.name}
+            authorEmail={element?.commit?.author?.email}
+            commitDate={element?.commit?.author?.date}
+          />
+        );
       })}
     </Container>
   );

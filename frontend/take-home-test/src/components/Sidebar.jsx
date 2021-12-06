@@ -6,9 +6,9 @@ import { ReactComponent as HomeSVG } from "../assets/home.svg";
 import SidebarLogo from "./SidebarLogo";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ open, getOpen }) => {
   const [state, setState] = useState({
-    open: true,
+    open: open,
   });
 
   return (
@@ -30,17 +30,27 @@ const Sidebar = () => {
             />
           </div>
         }
-        open={state.open}
-        // open={true}
-        onSetOpen={setState}
+        docked={true}
         styles={{
-          sidebar: { backgroundColor: "#FFFFFF" },
+          sidebar: { backgroundColor: "#FFFFFF", position: "fixed" },
         }}
       >
-        <button onClick={() => setState({ open: true })}>Open sidebar</button>
+        <p></p>
+        {/* <button
+          onClick={() => {
+            setState({ open: !state.open });
+            getOpen(state.open);
+          }}
+        >
+          Open sidebar
+        </button> */}
       </SidebarComponent>
     </div>
   );
+};
+
+Sidebar.defaultProps = {
+  open: false,
 };
 
 export default Sidebar;
