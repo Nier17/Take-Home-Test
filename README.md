@@ -10,7 +10,7 @@ Git Bash (Git)
 
 2. After clonning the repository, you will see a folder named "Take-Home-Test". Open it with Visual Studio Code.
 
-3. Open a new terminal, and go to the frontend folder. You can use the command "cd frontend"
+3. Open a new terminal, and go to the "backend" folder. You can use the command "cd backend"
 
 4. Run the command npm install. After this, you can run the server with the command "node index.js" or using nodemon with "npx nodemon".
 
